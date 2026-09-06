@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel administrativo para supervisar el inventario de una flota de vehículos.">
+  <title>Roadline | Inventario de vehículos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Barra lateral de navegación">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>roadline<span class="brand-dot">.</span></span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Cerrar menú">×</button>
+
+      <div class="workspace-switcher">
+        <div class="workspace-icon" aria-hidden="true">RL</div>
+        <div><strong>Roadline Fleet</strong><span>Operaciones · MX</span></div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </div>
+
+      <nav class="nav-group" aria-label="Navegación principal">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-link active" href="#resumen" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>Resumen</a>
+        <a class="nav-link" href="#inventario"><span class="nav-icon" aria-hidden="true">▤</span>Inventario <span class="nav-count">124</span></a>
+        <a class="nav-link" href="#mantenimiento"><span class="nav-icon" aria-hidden="true">⌁</span>Mantenimiento <span class="nav-count warning">8</span></a>
+        <a class="nav-link" href="#conductores"><span class="nav-icon" aria-hidden="true">◎</span>Conductores</a>
+        <a class="nav-link" href="#reportes"><span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+      </nav>
+
+      <nav class="nav-group secondary-nav" aria-label="Configuración">
+        <p class="nav-label">Administración</p>
+        <a class="nav-link" href="#alertas"><span class="nav-icon" aria-hidden="true">◌</span>Alertas <span class="notification-dot"></span></a>
+        <a class="nav-link" href="#ajustes"><span class="nav-icon" aria-hidden="true">⚙</span>Ajustes</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="support-card"><span class="support-icon" aria-hidden="true">?</span><div><strong>Centro de ayuda</strong><span>Estamos para ayudarte</span></div><span aria-hidden="true">↗</span></div>
+        <div class="profile"><div class="avatar">AS</div><div><strong>Aymer Suárez</strong><span>Administrador</span></div><button type="button" aria-label="Abrir menú de perfil">•••</button></div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <header class="topbar" aria-label="Encabezado superior">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="breadcrumb"><span>Workspace</span><b>/</b><strong>Resumen</strong></div>
+      <div class="topbar-actions">
+        <button class="icon-button notification-button" type="button" aria-label="Ver notificaciones"><span aria-hidden="true">♢</span><i></i></button>
+        <button class="export-button" id="exportButton" type="button"><span aria-hidden="true">↓</span> Exportar reporte</button>
+      </div>
+    </header>
+
+    <main class="main-content" id="resumen" role="main">
+      <section class="page-intro" aria-labelledby="page-title">
+        <div><p class="eyebrow">Lunes, 06 de septiembre de 2026 <span class="live-dot"></span> Datos en vivo</p><h1 id="page-title">Hola, Aymer <span aria-hidden="true">✦</span></h1><p class="intro-copy">Esto es lo que está pasando con tu flota hoy.</p></div>
+        <button class="date-button" type="button"><span aria-hidden="true">▣</span> Últimos 30 días <span aria-hidden="true">⌄</span></button>
+      </section>
+
+      <section class="metrics-grid" aria-label="Métricas principales">
+        <article class="metric-card accent-blue"><div class="metric-top"><span class="metric-icon" aria-hidden="true">▣</span><span class="trend positive">↗ 12.8%</span></div><p>Vehículos totales</p><strong>124</strong><small>vs. 110 el mes pasado</small><div class="sparkline blue" aria-hidden="true"><span style="height: 32%"></span><span style="height: 42%"></span><span style="height: 37%"></span><span style="height: 57%"></span><span style="height: 51%"></span><span style="height: 68%"></span><span style="height: 62%"></span><span style="height: 86%"></span></div></article>
+        <article class="metric-card accent-lime"><div class="metric-top"><span class="metric-icon" aria-hidden="true">◉</span><span class="trend positive">↗ 6.4%</span></div><p>Disponibles</p><strong>86</strong><small>69.4% de tu flota activa</small><div class="progress-track"><span style="width: 69.4%"></span></div></article>
+        <article class="metric-card accent-coral"><div class="metric-top"><span class="metric-icon" aria-hidden="true">⌁</span><span class="trend negative">↗ 2.1%</span></div><p>En mantenimiento</p><strong>8</strong><small>3 requieren atención hoy</small><div class="maintenance-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="metric-card accent-violet"><div class="metric-top"><span class="metric-icon" aria-hidden="true">◷</span><span class="trend positive">↗ 4.9%</span></div><p>Valor de inventario</p><strong>$8.4M</strong><small>MXN · +$420k este mes</small><div class="sparkline violet" aria-hidden="true"><span style="height: 60%"></span><span style="height: 48%"></span><span style="height: 65%"></span><span style="height: 56%"></span><span style="height: 72%"></span><span style="height: 67%"></span><span style="height: 83%"></span><span style="height: 91%"></span></div></article>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Analítica de inventario">
+        <article class="panel activity-panel" id="reportes">
+          <div class="panel-heading"><div><p class="panel-kicker">Utilización</p><h2>Actividad de la flota</h2></div><button class="more-button" type="button" aria-label="Más opciones de actividad">•••</button></div>
+          <div class="chart-meta"><div><strong>78.6%</strong><span>promedio de utilización</span></div><span class="trend positive">↗ 8.2% <small>vs. periodo anterior</small></span></div>
+          <div class="chart" role="img" aria-label="Gráfico de línea de la actividad de la flota durante la semana"><div class="y-axis"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 680 180" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#a8e063" stop-opacity=".28"/><stop offset="100%" stop-color="#a8e063" stop-opacity="0"/></linearGradient></defs><path class="chart-fill" d="M0,120 C35,124 52,83 88,94 S136,73 170,95 S220,105 255,68 S305,78 340,48 S390,74 425,57 S475,36 510,58 S555,45 595,28 S645,35 680,12 L680,180 L0,180Z"></path><path class="chart-line" d="M0,120 C35,124 52,83 88,94 S136,73 170,95 S220,105 255,68 S305,78 340,48 S390,74 425,57 S475,36 510,58 S555,45 595,28 S645,35 680,12"></path><circle cx="595" cy="28" r="5"></circle></svg><div class="x-axis"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div></div></div>
+        </article>
+
+        <article class="panel status-panel" id="mantenimiento">
+          <div class="panel-heading"><div><p class="panel-kicker">Distribución</p><h2>Estado actual</h2></div><button class="more-button" type="button" aria-label="Más opciones de estado">•••</button></div>
+          <div class="donut-wrap"><div class="donut" role="img" aria-label="69 por ciento disponibles, 24 por ciento en ruta, 7 por ciento en mantenimiento"><div><strong>124</strong><span>vehículos</span></div></div><div class="legend"><span><i class="legend-dot available"></i>Disponible <b>86</b></span><span><i class="legend-dot route"></i>En ruta <b>30</b></span><span><i class="legend-dot repair"></i>Mantenimiento <b>8</b></span></div></div>
+          <div class="status-note"><span aria-hidden="true">↗</span><p><strong>Flota saludable</strong><br><small>La disponibilidad subió <b>6.4%</b> esta semana.</small></p></div>
+        </article>
+      </section>
+
+      <section class="panel inventory-panel" id="inventario" aria-labelledby="inventory-title">
+        <div class="panel-heading inventory-heading"><div><p class="panel-kicker">Seguimiento operativo</p><h2 id="inventory-title">Inventario reciente</h2></div><div class="table-actions"><label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar vehículo..." aria-label="Buscar vehículo"></label><button class="filter-button" type="button"><span aria-hidden="true">≡</span> Filtrar</button><button class="more-button" type="button" aria-label="Más opciones de inventario">•••</button></div></div>
+        <div class="table-scroll"><table><thead><tr><th>Vehículo</th><th>Tipo</th><th>Ubicación</th><th>Último servicio</th><th>Valor</th><th>Estado</th><th><span class="sr-only">Acciones</span></th></tr></thead><tbody id="vehicleTable"><tr><td><div class="vehicle-cell"><span class="vehicle-thumb suv" aria-hidden="true">▰</span><span><strong>RL-0428</strong><small>Toyota RAV4 · 2023</small></span></div></td><td>SUV</td><td>Monterrey, NL</td><td>02 sep 2026</td><td>$485,000</td><td><span class="status-pill available-pill">Disponible</span></td><td><button class="row-menu" type="button" aria-label="Opciones para RL-0428">•••</button></td></tr><tr><td><div class="vehicle-cell"><span class="vehicle-thumb sedan" aria-hidden="true">▰</span><span><strong>RL-0187</strong><small>Ford Transit · 2022</small></span></div></td><td>Van</td><td>Guadalajara, Jal.</td><td>28 ago 2026</td><td>$612,500</td><td><span class="status-pill route-pill">En ruta</span></td><td><button class="row-menu" type="button" aria-label="Opciones para RL-0187">•••</button></td></tr><tr><td><div class="vehicle-cell"><span class="vehicle-thumb pickup" aria-hidden="true">▰</span><span><strong>RL-0304</strong><small>Chevrolet Silverado · 2021</small></span></div></td><td>Pickup</td><td>Ciudad de México</td><td>06 sep 2026</td><td>$559,900</td><td><span class="status-pill repair-pill">Mantenimiento</span></td><td><button class="row-menu" type="button" aria-label="Opciones para RL-0304">•••</button></td></tr><tr><td><div class="vehicle-cell"><span class="vehicle-thumb compact" aria-hidden="true">▰</span><span><strong>RL-0512</strong><small>Nissan Versa · 2024</small></span></div></td><td>Sedán</td><td>Querétaro, Qro.</td><td>31 ago 2026</td><td>$298,000</td><td><span class="status-pill available-pill">Disponible</span></td><td><button class="row-menu" type="button" aria-label="Opciones para RL-0512">•••</button></td></tr></tbody></table></div>
+        <div class="table-footer"><span>Mostrando <strong id="resultCount">4</strong> de 124 vehículos</span><div class="pagination"><button class="page-button active" type="button">1</button><button class="page-button" type="button">2</button><button class="page-button" type="button">3</button><span>...</span><button class="page-button" type="button">32</button><button class="next-button" type="button" aria-label="Página siguiente">→</button></div></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>© 2026 Roadline Fleet</span><span>Última sincronización: hace 2 min <i class="sync-dot"></i></span><a href="#privacidad">Privacidad</a><a href="#soporte">Soporte</a></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
