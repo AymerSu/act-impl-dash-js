@@ -1,6 +1,6 @@
-# Carros Bogotá · Dashboard de inventario
+# Carros Bogotá · Dashboard de flota
 
-Dashboard administrativo responsive para gestionar el inventario de una flota de vehículos. La interfaz permite consultar el estado de la flota, revisar métricas clave, analizar la utilización semanal y buscar vehículos desde la tabla de inventario.
+Dashboard administrativo responsive para consultar rápidamente el estado de una flota de vehículos. La vista está centrada en métricas operativas y analítica visual, con una interfaz deliberadamente simple: no incluye menú lateral, barra superior, tabla de inventario, controles de exportación, notificaciones ni footer.
 
 ## Demo
 
@@ -10,31 +10,37 @@ Para ejecutar el proyecto, abre `index.html` en el navegador. No requiere instal
 
 ## Tecnologías
 
-- HTML5 semántico: `aside`, `header`, `main`, `section`, `article`, `table` y `footer`.
-- CSS3: variables custom, CSS Grid, Flexbox, media queries, gradientes y estados interactivos.
-- JavaScript vanilla: búsqueda, paginación visual y mensajes de acción.
+- HTML5 semántico con `main`, `section` y `article`.
+- CSS3 con variables custom, CSS Grid, Flexbox, media queries y transiciones.
+- JavaScript vanilla para la interacción táctil de los módulos.
 - Tipografías Manrope y DM Mono desde Google Fonts.
 
-## Componentes principales
+## Componentes actuales
 
-1. **Barra lateral**: navegación por áreas del workspace, conteos de inventario y perfil de usuario.
-2. **Tarjetas de resumen**: vehículos totales, disponibilidad, mantenimiento y valor del inventario.
-3. **Gráfico de actividad**: visualización semanal de la utilización de la flota.
-4. **Estado actual**: gráfico de distribución entre vehículos disponibles, en ruta y en mantenimiento.
+1. **Tarjetas de resumen**: vehículos totales, vehículos disponibles, vehículos en mantenimiento y valor del inventario.
+2. **Actividad de la flota**: gráfico semanal de utilización con promedio y variación del periodo.
+3. **Estado actual**: gráfico circular con la distribución de vehículos disponibles, en ruta y en mantenimiento.
+4. **Resumen operativo**: mensaje visual que indica la salud general de la flota.
 
-## Decisiones de diseño
+## Diseño y layout
 
-La dirección visual toma referencias de dashboards operativos modernos: una base oscura, paneles de alto contraste y colores de acento reservados para datos importantes. El verde lima comunica disponibilidad y crecimiento; el coral señala mantenimiento; el azul identifica vehículos en ruta.
+La interfaz utiliza un tema oscuro de alto contraste, con fondo azul profundo, paneles oscuros y textos claros. Los acentos tienen significado operativo: verde lima para disponibilidad y crecimiento, coral para mantenimiento y azul para vehículos en ruta.
 
-El layout general utiliza `grid-template-areas` para separar header, contenido principal y footer. Dentro de cada componente se usa Flexbox para alinear controles y datos. En móvil la tabla mantiene su legibilidad mediante desplazamiento horizontal y los controles se compactan.
+El layout principal usa CSS Grid con un único espacio de contenido. Las tarjetas y paneles usan Flexbox internamente para alinear métricas, leyendas y controles. Los módulos tienen bordes rectos, sin esquinas redondeadas, y se adaptan a escritorio, tablet y móvil mediante media queries.
+
+## Interacciones
+
+- En escritorio, las tarjetas y paneles aumentan ligeramente de tamaño al pasar el mouse por encima.
+- En celulares y tablets, el mismo efecto se activa mientras el usuario mantiene presionado un módulo.
+- La transición es sutil para evitar cambios bruscos en la lectura del dashboard.
+- `prefers-reduced-motion` desactiva el zoom para usuarios que prefieren reducir el movimiento.
 
 ## Accesibilidad
 
 - Jerarquía de headings y landmarks HTML5.
-- Roles y etiquetas ARIA en navegación, controles, gráfico y tabla.
-- Estados de foco visibles para navegación con teclado.
-- Contraste alto en navegación y textos principales.
-- `aria-label` para iconos funcionales y descripciones de gráficos.
+- `role="main"` para identificar el contenido principal.
+- `aria-label` para los gráficos y botones de opciones.
+- Textos claros sobre fondos oscuros para mejorar el contraste.
 - Soporte para `prefers-reduced-motion`.
 
 ## Evidencias
@@ -47,4 +53,4 @@ El layout general utiliza `grid-template-areas` para separar header, contenido p
 
 ## Referencias visuales
 
-La composición se inspiró en patrones habituales de dashboards de operaciones y en galerías de producto como Dribbble Dashboards: tarjetas de KPI, gráficos de lectura rápida, tablas con filtros y una paleta de estados semánticos. La implementación es original y está adaptada al caso de uso de inventario vehicular.
+La composición toma referencias de dashboards operativos modernos y galerías de producto como Dribbble Dashboards: KPI compactos, gráficos de lectura rápida, jerarquía visual clara y una paleta semántica. La implementación es original y está adaptada al seguimiento de una flota vehicular.
