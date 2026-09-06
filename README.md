@@ -21,11 +21,10 @@ Para ejecutar el proyecto, abre `index.html` en el navegador. No requiere instal
 2. **Tarjetas de resumen**: vehículos totales, disponibilidad, mantenimiento y valor del inventario.
 3. **Gráfico de actividad**: visualización semanal de la utilización de la flota.
 4. **Estado actual**: gráfico de distribución entre vehículos disponibles, en ruta y en mantenimiento.
-5. **Tabla de inventario**: búsqueda por vehículo, estado, ubicación y datos de servicio.
 
 ## Decisiones de diseño
 
-La dirección visual toma referencias de dashboards operativos modernos: una base oscura para la navegación, un lienzo claro para reducir fatiga visual y colores de acento reservados para datos importantes. El verde lima comunica disponibilidad y crecimiento; el coral señala mantenimiento; el azul identifica vehículos en ruta.
+La dirección visual toma referencias de dashboards operativos modernos: una base oscura, paneles de alto contraste y colores de acento reservados para datos importantes. El verde lima comunica disponibilidad y crecimiento; el coral señala mantenimiento; el azul identifica vehículos en ruta.
 
 El layout general utiliza `grid-template-areas` para separar header, contenido principal y footer. Dentro de cada componente se usa Flexbox para alinear controles y datos. En móvil la tabla mantiene su legibilidad mediante desplazamiento horizontal y los controles se compactan.
 
