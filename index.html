@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Panel administrativo para supervisar el inventario de una flota de vehículos.">
-  <title>Roadline | Inventario de vehículos</title>
+  <title>Carros Bogotá | Inventario de vehículos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,53 +12,14 @@
 </head>
 <body>
   <div class="app-shell">
-    <aside class="sidebar" id="sidebar" aria-label="Barra lateral de navegación">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>roadline<span class="brand-dot">.</span></span>
-      </div>
-      <button class="sidebar-close" id="sidebarClose" type="button" aria-label="Cerrar menú">×</button>
-
-      <div class="workspace-switcher">
-        <div class="workspace-icon" aria-hidden="true">RL</div>
-        <div><strong>Roadline Fleet</strong><span>Operaciones · MX</span></div>
-        <span class="chevron" aria-hidden="true">⌄</span>
-      </div>
-
-      <nav class="nav-group" aria-label="Navegación principal">
-        <p class="nav-label">Workspace</p>
-        <a class="nav-link active" href="#resumen" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>Resumen</a>
-        <a class="nav-link" href="#inventario"><span class="nav-icon" aria-hidden="true">▤</span>Inventario <span class="nav-count">124</span></a>
-        <a class="nav-link" href="#mantenimiento"><span class="nav-icon" aria-hidden="true">⌁</span>Mantenimiento <span class="nav-count warning">8</span></a>
-        <a class="nav-link" href="#conductores"><span class="nav-icon" aria-hidden="true">◎</span>Conductores</a>
-        <a class="nav-link" href="#reportes"><span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
-      </nav>
-
-      <nav class="nav-group secondary-nav" aria-label="Configuración">
-        <p class="nav-label">Administración</p>
-        <a class="nav-link" href="#alertas"><span class="nav-icon" aria-hidden="true">◌</span>Alertas <span class="notification-dot"></span></a>
-        <a class="nav-link" href="#ajustes"><span class="nav-icon" aria-hidden="true">⚙</span>Ajustes</a>
-      </nav>
-
-      <div class="sidebar-bottom">
-        <div class="support-card"><span class="support-icon" aria-hidden="true">?</span><div><strong>Centro de ayuda</strong><span>Estamos para ayudarte</span></div><span aria-hidden="true">↗</span></div>
-        <div class="profile"><div class="avatar">AS</div><div><strong>Aymer Suárez</strong><span>Administrador</span></div><button type="button" aria-label="Abrir menú de perfil">•••</button></div>
-      </div>
-    </aside>
-
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <header class="topbar" aria-label="Encabezado superior">
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-      <div class="breadcrumb"><span>Workspace</span><b>/</b><strong>Resumen</strong></div>
-      <div class="topbar-actions">
-        <button class="icon-button notification-button" type="button" aria-label="Ver notificaciones"><span aria-hidden="true">♢</span><i></i></button>
-        <button class="export-button" id="exportButton" type="button"><span aria-hidden="true">↓</span> Exportar reporte</button>
-      </div>
+      <div class="breadcrumb"><span>Carros Bogotá</span><b>/</b><strong>Dashboard</strong></div>
+      <span class="user-label">Pepito Pérez · Administrador</span>
     </header>
 
     <main class="main-content" id="resumen" role="main">
       <section class="page-intro" aria-labelledby="page-title">
-        <div><p class="eyebrow">Lunes, 06 de septiembre de 2026 <span class="live-dot"></span> Datos en vivo</p><h1 id="page-title">Hola, Aymer <span aria-hidden="true">✦</span></h1><p class="intro-copy">Esto es lo que está pasando con tu flota hoy.</p></div>
+        <div><p class="eyebrow">Lunes, 06 de septiembre de 2026 <span class="live-dot"></span> Datos en vivo</p><h1 id="page-title">Hola, Pepito Pérez</h1><p class="intro-copy">Esto es lo que está pasando con tu inventario hoy.</p></div>
         <button class="date-button" type="button"><span aria-hidden="true">▣</span> Últimos 30 días <span aria-hidden="true">⌄</span></button>
       </section>
 
@@ -90,7 +51,7 @@
       </section>
     </main>
 
-    <footer class="footer"><span>© 2026 Roadline Fleet</span><span>Última sincronización: hace 2 min <i class="sync-dot"></i></span><a href="#privacidad">Privacidad</a><a href="#soporte">Soporte</a></footer>
+    <footer class="footer"><span>© 2026 Carros Bogotá</span><span>Última sincronización: hace 2 min <i class="sync-dot"></i></span><a href="#privacidad">Privacidad</a><a href="#soporte">Soporte</a></footer>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>

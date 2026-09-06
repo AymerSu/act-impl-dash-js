@@ -1,4 +1,4 @@
-# Roadline Fleet · Dashboard de inventario
+# Carros Bogotá · Dashboard de inventario
 
 Dashboard administrativo responsive para gestionar el inventario de una flota de vehículos. La interfaz permite consultar el estado de la flota, revisar métricas clave, analizar la utilización semanal y buscar vehículos desde la tabla de inventario.
 
@@ -12,7 +12,7 @@ Para ejecutar el proyecto, abre `index.html` en el navegador. No requiere instal
 
 - HTML5 semántico: `aside`, `header`, `main`, `section`, `article`, `table` y `footer`.
 - CSS3: variables custom, CSS Grid, Flexbox, media queries, gradientes y estados interactivos.
-- JavaScript vanilla: sidebar responsive, búsqueda, paginación visual, notificaciones y mensajes de acción.
+- JavaScript vanilla: búsqueda, paginación visual y mensajes de acción.
 - Tipografías Manrope y DM Mono desde Google Fonts.
 
 ## Componentes principales
@@ -27,7 +27,7 @@ Para ejecutar el proyecto, abre `index.html` en el navegador. No requiere instal
 
 La dirección visual toma referencias de dashboards operativos modernos: una base oscura para la navegación, un lienzo claro para reducir fatiga visual y colores de acento reservados para datos importantes. El verde lima comunica disponibilidad y crecimiento; el coral señala mantenimiento; el azul identifica vehículos en ruta.
 
-El layout general utiliza `grid-template-areas` para separar sidebar, header, contenido principal y footer. Dentro de cada componente se usa Flexbox para alinear controles y datos. En tablet el sidebar se convierte en un drawer, y en móvil la tabla mantiene su legibilidad mediante desplazamiento horizontal y los controles se compactan.
+El layout general utiliza `grid-template-areas` para separar header, contenido principal y footer. Dentro de cada componente se usa Flexbox para alinear controles y datos. En móvil la tabla mantiene su legibilidad mediante desplazamiento horizontal y los controles se compactan.
 
 ## Accesibilidad
 
@@ -48,4 +48,4 @@ El layout general utiliza `grid-template-areas` para separar sidebar, header, co
 
 ## Referencias visuales
 
-La composición se inspiró en patrones habituales de dashboards de operaciones y en galerías de producto como Dribbble Dashboards: sidebar persistente, tarjetas de KPI, gráficos de lectura rápida, tablas con filtros y una paleta de estados semánticos. La implementación es original y está adaptada al caso de uso de inventario vehicular.
+La composición se inspiró en patrones habituales de dashboards de operaciones y en galerías de producto como Dribbble Dashboards: tarjetas de KPI, gráficos de lectura rápida, tablas con filtros y una paleta de estados semánticos. La implementación es original y está adaptada al caso de uso de inventario vehicular.
