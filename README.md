@@ -47,9 +47,9 @@ El layout principal usa CSS Grid con un único espacio de contenido. Las tarjeta
 
 | Vista | Captura |
 |---|---|
-| Escritorio | [`evidencias/dashboard-desktop.png`](evidencias/dashboard-desktop.png) |
-| Tablet | [`evidencias/dashboard-tablet.png`](evidencias/dashboard-tablet.png) |
-| Móvil | [`evidencias/dashboard-mobile.png`](evidencias/dashboard-mobile.png) |
+| Escritorio | [`evidencias/dashboard-desktop.png`](evidencias/desktop.png) |
+| Tablet | [`evidencias/dashboard-tablet.png`](evidencias/tablet.png) |
+| Móvil | [`evidencias/dashboard-mobile.png`](evidencias/mobile.png) |
 
 ## Referencias visuales
 
